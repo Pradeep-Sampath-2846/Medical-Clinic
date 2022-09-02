@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.dep9.clinic.controller.LoginFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="478.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.LoginFormController">
+   <children>
+      <Label layoutX="131.0" layoutY="50.0" text="Log in to open  Source Medical Clinic">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="112.0" prefHeight="26.0" prefWidth="215.0" text="Enter valid Login credentials to " />
+      <VBox layoutX="131.0" layoutY="149.0" prefHeight="174.0" prefWidth="406.0" spacing="5.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="406.0" text="Username">
+               <font>
+                  <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUsername" prefHeight="26.0" prefWidth="339.0">
+               <VBox.margin>
+                  <Insets bottom="4.0" left="23.0" right="23.0" top="8.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="406.0" text="Password">
+               <font>
+                  <Font name="DejaVu Sans Condensed Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtPassword" layoutX="33.0" layoutY="56.0" prefHeight="26.0" prefWidth="339.0">
+               <VBox.margin>
+                  <Insets left="23.0" right="23.0" />
+               </VBox.margin>
+            </JFXTextField>
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnLogin" layoutX="291.0" layoutY="323.0" onAction="#btnLoginOnAction" prefHeight="54.0" prefWidth="101.0" style="-fx-background-color: purple;" text="Login" textFill="WHITE" />
+   </children>
 </AnchorPane>
