@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="454.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.AdminSettingsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8d2ea" height="4.0" layoutX="24.0" layoutY="71.0" stroke="BLACK" strokeType="INSIDE" width="602.0" />
+      <AnchorPane layoutX="198.0" layoutY="83.0" prefHeight="358.0" prefWidth="427.0" style="-fx-background-color: #C9C9F1;" />
+      <AnchorPane layoutX="26.0" layoutY="83.0" prefHeight="358.0" prefWidth="168.0" style="-fx-background-color: #AAAAD0;">
+         <children>
+            <JFXButton fx:id="btnHospitalFee" layoutX="9.0" layoutY="14.0" onAction="#btnHospitalFeeOnAction" prefHeight="40.0" prefWidth="154.0" style="-fx-border-color: white;" text="HOSPITAL FEE" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Condensed Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDiscounts" layoutX="7.0" layoutY="80.0" onAction="#btnDiscountsOnAction" prefHeight="28.0" prefWidth="159.0" style="-fx-border-color: white;" text="DISCOUNTS" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Condensed Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnChangePassword" layoutX="7.0" layoutY="120.0" onAction="#btnChangePasswordOnAction" prefHeight="40.0" prefWidth="159.0" style="-fx-border-color: white;" text="CHANGE PASSWORD" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Condensed Bold" size="11.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnManageFields" layoutX="7.0" layoutY="179.0" onAction="#btnManageFieldsOnAction" prefHeight="28.0" prefWidth="159.0" style="-fx-border-color: white;" text="MANAGE FIELDS" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Condensed Bold" size="11.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnAbout" layoutX="7.0" layoutY="231.0" onAction="#btnAboutOnAction" prefHeight="28.0" prefWidth="159.0" style="-fx-border-color: white;" text="ABOUT" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Condensed Bold" size="11.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="223.0" layoutY="16.0" prefHeight="28.0" prefWidth="189.0" text="SETTINGS">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="57.0" fitWidth="85.0" layoutX="63.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/Settings-icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

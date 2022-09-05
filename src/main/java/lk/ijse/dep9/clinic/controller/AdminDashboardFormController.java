@@ -22,7 +22,15 @@ public class AdminDashboardFormController {
     public void btnViewRecordsOnAction(ActionEvent actionEvent) {
     }
 
-    public void btnSettingsOnAction(ActionEvent actionEvent) {
+    public void btnSettingsOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = this.getClass().getResource("/view/AdminSettingsForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(load));
+        stage.centerOnScreen();
+        btnLogout.getScene().getWindow().hide();
+        stage.setResizable(false);
+        stage.show();
     }
 
     public void btnLogoutOnAction(ActionEvent actionEvent) throws IOException {
