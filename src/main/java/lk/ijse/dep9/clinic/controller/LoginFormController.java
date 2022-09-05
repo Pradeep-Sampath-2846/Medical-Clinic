@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
+import lk.ijse.dep9.clinic.misc.CryptoUtil;
 import lk.ijse.dep9.clinic.security.SecurityContextHolder;
 import lk.ijse.dep9.clinic.security.User;
 
@@ -60,14 +61,19 @@ public class LoginFormController {
 
 
             //With Prepared Statement
-            String sql ="SELECT role FROM User WHERE username=? AND password=?";
+            String sql ="SELECT role,password FROM User WHERE username=?";
 
             PreparedStatement stm = connection.prepareStatement(sql);
             stm.setString(1,userName);
-            stm.setString(1,password);
             ResultSet resultSet = stm.executeQuery();
 
             if (resultSet.next()){
+                String cypherText =resultSet.getString("password");
+                if (!CryptoUtil.getSha256Hex(password).equals(cypherText)){
+                    new Alert(Alert.AlertType.ERROR,"Invalid login credentialsss").show();
+                    txtUsername.requestFocus();
+                    return;
+                }
                 String role = resultSet.getString("role");
                 SecurityContextHolder.setPrincipal(new User(userName,role));
 
