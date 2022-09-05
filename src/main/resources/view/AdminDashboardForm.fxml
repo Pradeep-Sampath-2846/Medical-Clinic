@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.AdminDashboardFormController">
+<AnchorPane prefHeight="452.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.AdminDashboardFormController">
    <children>
-      <Label layoutX="173.0" layoutY="88.0" text="Admin Dashboard">
+      <Label alignment="CENTER" layoutX="21.0" layoutY="25.0" prefHeight="37.0" prefWidth="402.0" text="MEDICARE CHANNELING CENTER">
          <font>
-            <Font name="DejaVu Sans Bold" size="24.0" />
+            <Font name="DejaVu Sans Bold" size="19.0" />
          </font>
       </Label>
+      <Label alignment="CENTER" layoutX="131.0" layoutY="63.0" prefHeight="43.0" prefWidth="165.0" text="ADMINISTRATOR">
+         <font>
+            <Font name="Khmer OS System" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnProfileManagement" layoutX="120.0" layoutY="222.0" onAction="#btnProfileManagementOnAction" prefHeight="43.0" prefWidth="193.0" style="-fx-background-color: #A8A8EF;" text="Profile Managment" />
+      <JFXButton fx:id="btnViewRecords" layoutX="121.0" layoutY="282.0" onAction="#btnViewRecordsOnAction" prefHeight="38.0" prefWidth="194.0" style="-fx-background-color: #A8A8EF;" text="View Records" />
+      <JFXButton fx:id="btnSettings" layoutX="121.0" layoutY="338.0" onAction="#btnSettingsOnAction" prefHeight="38.0" prefWidth="194.0" style="-fx-background-color: #A8A8EF;" text="Settings" />
+      <ImageView fitHeight="104.0" fitWidth="119.0" layoutX="169.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/MediCare.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnLogout" layoutX="121.0" layoutY="387.0" onAction="#btnLogoutOnAction" prefHeight="38.0" prefWidth="194.0" style="-fx-background-color: #A8A8EF;" text="Logout" />
    </children>
 </AnchorPane>

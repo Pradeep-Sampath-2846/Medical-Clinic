@@ -95,6 +95,7 @@ public class LoginFormController {
                 stage.setTitle("Open Source Medical Clinic");
                 stage.setScene(scene);
                 stage.show();
+                btnLogin.getScene().getWindow().hide();
                 stage.centerOnScreen();
 
             }else {
